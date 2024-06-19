@@ -57,7 +57,7 @@
   const validateQRCode = async (qrCodeData) => {
 
     try {
-      const response = await axios.post('http://192.168.1.10:3001/validate', { qrCodeData });
+      const response = await axios.post('https://qrcode-9k3y.onrender.com/validate', { qrCodeData });
       console.log(response.data); // Handle the response from the server
       found.value=response.data.isValid;
     } catch (error) {

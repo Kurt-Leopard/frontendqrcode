@@ -7,7 +7,7 @@ const qrCode = ref(null);
 
 const generateQRCode = async () => {
   try {
-    const response = await axios.post('http://192.168.1.10:3001/generate', { data: inputData.value });
+    const response = await axios.post('https://qrcode-9k3y.onrender.com/generate', { data: inputData.value });
     qrCode.value = response.data.qrCode;
   } catch (error) {
     console.error("There was an error generating the QR code: ", error);
