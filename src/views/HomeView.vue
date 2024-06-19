@@ -13,6 +13,8 @@ const generateQRCode = async () => {
     console.error("There was an error generating the QR code: ", error);
   }
 };
+import { RouterLink} from 'vue-router'
+
 </script>
 
 <template>
@@ -21,4 +23,5 @@ const generateQRCode = async () => {
     <button @click="generateQRCode">Generate QR Code</button>
     <img v-if="qrCode" :src="qrCode" />
   </div>
+  <RouterLink to="/qrcode">scanner</RouterLink>
 </template>
